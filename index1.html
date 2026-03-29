@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flowly</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
+body{background:#f5f5dc;color:#111;line-height:1.6;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+
+.container{max-width:1100px;margin:auto;padding:20px}
+
+/* Navbar */
+.navbar{
+display:flex;justify-content:space-between;align-items:center;
+padding:15px 20px;background:rgba(255,255,255,0.8);
+backdrop-filter:blur(10px);position:sticky;top:0;z-index:100;
+border-radius:0 0 16px 16px
+}
+.logo{font-weight:600;font-size:1.3rem}
+.nav-links{display:flex;gap:20px}
+
+/* Buttons */
+.btn{
+padding:10px 18px;border-radius:999px;
+background:linear-gradient(135deg,#000,#444);
+color:#fff;transition:.3s;
+cursor:pointer;
+}
+.btn:hover{
+transform:translateY(-3px) scale(1.03);
+box-shadow:0 10px 25px rgba(0,0,0,.2)
+}
+
+/* Hero */
+.hero{text-align:center;padding:120px 20px 80px}
+.hero h1{
+font-size:3rem;margin-bottom:20px;
+background:linear-gradient(90deg,#000,#555);
+-webkit-background-clip:text;-webkit-text-fill-color:transparent
+}
+.hero p{color:#555;margin-bottom:30px;font-size:1.1rem}
+
+/* Sections */
+section{padding:60px 20px}
+h2{text-align:center;margin-bottom:40px;font-size:2rem}
+
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+
+.card{
+background:#fff;padding:25px;border-radius:16px;
+box-shadow:0 10px 20px rgba(0,0,0,.05);
+transition:.3s
+}
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 20px 40px rgba(0,0,0,.1)
+}
+
+/* Pricing highlight */
+.pricing .card:nth-child(2){
+border:2px solid black;
+transform:scale(1.05)
+}
+
+.price{font-size:2rem;margin:10px 0}
+
+/* Testimonials */
+.testimonial{font-style:italic}
+
+/* FAQ */
+.faq-item{
+cursor:pointer;padding:10px;border-radius:8px;
+transition:.2s
+}
+.faq-item:hover{background:#eee}
+.faq-answer{display:none;margin-top:5px;color:#555}
+.faq-item.active .faq-answer{display:block}
+
+/* CTA */
+.cta{
+text-align:center;padding:100px 25px;
+background:#fff;border-radius:24px;
+box-shadow:0 25px 60px rgba(0,0,0,.1);
+margin:100px auto;max-width:900px
+}
+.cta h2{margin-bottom:12px;font-size:2.3rem}
+.cta p{margin-bottom:35px;color:#555;font-size:1.1rem}
+.cta .btn{margin-top:5px}
+
+/* Footer */
+footer{text-align:center;padding:30px;color:#777}
+
+/* Animations */
+.fade-up{
+opacity:0;
+transform:translateY(30px);
+transition:all 0.8s ease;
+}
+.fade-up.show{
+opacity:1;
+transform:translateY(0);
+}
+
+/* Responsive */
+@media(max-width:768px){
+.grid{grid-template-columns:1fr}
+.nav-links{display:none}
+.hero h1{font-size:2.2rem}
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<div class="navbar container fade-up">
+<div class="logo">Flowly</div>
+<div class="nav-links">
+<a href="#features">Features</a>
+<a href="#pricing">Pricing</a>
+<a href="#faq">FAQ</a>
+</div>
+<a href="#pricing" class="btn fade-up">Get Started</a>
+</div>
+
+<!-- Hero -->
+<section class="hero fade-up">
+<h1>Automate your customer support</h1>
+<p>Flowly helps businesses respond instantly and scale effortlessly.</p>
+<a href="#pricing" class="btn fade-up">Start Free</a>
+</section>
+
+<!-- Features -->
+<section id="features" class="container fade-up">
+<h2>Features</h2>
+<div class="grid">
+<div class="card fade-up">
+<i data-lucide="zap"></i>
+<h3>Instant Responses</h3>
+<p>Reply to customers 24/7 without delay.</p>
+</div>
+
+<div class="card fade-up">
+<i data-lucide="shield"></i>
+<h3>Secure Platform</h3>
+<p>Enterprise-grade protection for your data.</p>
+</div>
+
+<div class="card fade-up">
+<i data-lucide="settings"></i>
+<h3>Easy Integration</h3>
+<p>Connect your tools in minutes.</p>
+</div>
+</div>
+</section>
+
+<!-- How it works -->
+<section class="container fade-up">
+<h2>How it works</h2>
+<div class="grid">
+<div class="card fade-up"><h3>1. Connect</h3><p>Link your platform.</p></div>
+<div class="card fade-up"><h3>2. Train</h3><p>Add your knowledge base.</p></div>
+<div class="card fade-up"><h3>3. Automate</h3><p>Let the system handle support.</p></div>
+</div>
+</section>
+
+<!-- Pricing -->
+<section id="pricing" class="container pricing fade-up">
+<h2>Pricing</h2>
+<div class="grid">
+
+<div class="card fade-up">
+<h3>Starter</h3>
+<div class="price">$0</div>
+<p>Basic features</p>
+</div>
+
+<div class="card fade-up">
+<h3>Pro</h3>
+<div class="price">$12/mo</div>
+<p>Best for businesses</p>
+</div>
+
+<div class="card fade-up">
+<h3>Enterprise</h3>
+<div class="price">Custom</div>
+<p>Advanced solutions</p>
+</div>
+
+</div>
+</section>
+
+<!-- Testimonials -->
+<section class="container fade-up">
+<h2>Testimonials</h2>
+<div class="grid">
+<div class="card testimonial fade-up">
+“Reduced our workload by 70%.”
+<br><strong>- Sarah</strong>
+</div>
+
+<div class="card testimonial fade-up">
+“Customers love the instant replies.”
+<br><strong>- Ahmed</strong>
+</div>
+
+<div class="card testimonial fade-up">
+“Best decision we made.”
+<br><strong>- Lisa</strong>
+</div>
+</div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="container fade-up">
+<h2>FAQ</h2>
+
+<div class="faq-item fade-up">
+<strong>Is there a free plan?</strong>
+<div class="faq-answer">Yes, you can start for free.</div>
+</div>
+
+<div class="faq-item fade-up">
+<strong>Can I upgrade?</strong>
+<div class="faq-answer">Anytime.</div>
+</div>
+
+</section>
+
+<!-- CTA -->
+<div class="cta fade-up">
+<h2>Start automating today</h2>
+<p>Join The Flowly.</p>
+<a href="#pricing" class="btn fade-up">Get Started</a>
+</div>
+
+<footer class="fade-up">
+© 2026 Flowly
+</footer>
+
+<script>
+lucide.createIcons();
+
+// FAQ toggle
+document.querySelectorAll(".faq-item").forEach(item=>{
+  item.addEventListener("click",()=>{
+    item.classList.toggle("active");
+  });
+});
+
+// Scroll fade-up animations
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add("show");
+    }
+  });
+},{threshold:0.1});
+
+document.querySelectorAll(".fade-up").forEach(el=>{
+  observer.observe(el);
+});
+
+// Smooth scroll for all buttons and anchor links
+document.querySelectorAll('a[href^="#"], .btn').forEach(el => {
+  el.addEventListener('click', function(e) {
+    const targetId = this.getAttribute('href');
+
+    // Only scroll if valid anchor
+    if (!targetId || targetId === '#' || !document.querySelector(targetId)) return;
+
+    e.preventDefault();
+    const target = document.querySelector(targetId);
+    const start = window.scrollY;
+    const end = target.getBoundingClientRect().top + window.scrollY - 20;
+    const duration = 600;
+    let startTime = null;
+
+    function animateScroll(timestamp) {
+      if (!startTime) startTime = timestamp;
+      const progress = timestamp - startTime;
+      const t = Math.min(progress / duration, 1);
+      const ease = t < 0.5 ? 2*t*t : 1 - Math.pow(-2*t+2,2)/2;
+      window.scrollTo(0, start + (end - start) * ease);
+
+      if (progress < duration) requestAnimationFrame(animateScroll);
+    }
+
+    requestAnimationFrame(animateScroll);
+  });
+});
+</script>
+
+</body>
+</html>
